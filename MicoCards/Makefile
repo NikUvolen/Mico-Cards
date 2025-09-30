@@ -1,6 +1,7 @@
 .DEFAULT_GOAL := help
 
 MANAGER = python manage.py
+DOCKER = docker compose
 
 help:
 	@echo "Makefile commands:"
@@ -9,6 +10,15 @@ help:
 	@echo "  migrate           - Apply database migrations"
 	@echo "  createsuperuser   - Create a new superuser"
 	@echo "  test              - Run tests"
+
+up:
+	$(DOCKER) up -d 
+
+build:
+	$(DOCKER) up --build -d
+
+down:
+	$(DOCKER) down
 
 manage:
 	$(MANAGER) $(filter-out $@,$(MAKECMDGOALS))

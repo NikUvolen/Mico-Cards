@@ -1,2 +1,12 @@
 SECRET_KEY=django-insecure-spkuh!zq%&#7ub___u=^g*y-67r7l^n+o&&gmd$db-9b5-rfnf
 DEBUG=1
+
+DB_NAME=mico_cards_db
+DB_USER=mico_cards_user
+DB_PASSWORD=micoCards_Password
+POSTGRES_HOST=127.0.0.1
+POSTGRES_PORT=5432
+
+PGADMIN_PORT=5434
+PGADMIN_DEFAULT_EMAIL=admin@admin.com
+PGADMIN_DEFAULT_PASSWORD=admin
